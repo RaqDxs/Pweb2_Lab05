@@ -46,13 +46,11 @@ class Picture:
 
 
   def join(self, p):
-    """ Devuelve una nueva figura poniendo la figura del argumento 
-        al lado derecho de la figura actual """
     unido = []
-    for value in self.img:
-      filaJunta = ""
-      filaJunta += value + p[value]
-    return Picture(None)
+    for i in range(len(self.img)):
+      filaJunta = self.img[i] + p.img[i]
+      unido.append(filaJunta)
+    return Picture(unido)
 
 
 
