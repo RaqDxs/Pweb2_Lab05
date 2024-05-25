@@ -51,7 +51,7 @@ class Picture:
 
 
 
-# ToDo 
+# Completed 
   def up(self, p):
     compuesto = []
     for fila in self.img:
@@ -62,7 +62,7 @@ class Picture:
 
 
 
-# ToDo
+# Completed
   def under(self, p):
     sobrepuesto = []
     for fila in p.img:  
@@ -77,7 +77,11 @@ class Picture:
 
 # ToDo 
   def horizontalRepeat(self, n):
-    return Picture(None)
+    repetidoH = []
+    for fila in self.img:
+      filaRepetida = fila * n
+      repetidoH.append(filaRepetida)
+    return Picture(repetidoH)
 
 # ToDo
   def verticalRepeat(self, n):
