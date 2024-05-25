@@ -10,6 +10,7 @@ tablero2 = tablero1.negative()
 
 tablero3 = tablero2.verticalRepeat(2)
 
-resultado = tablero1.up(tablero3)
+# Ahora aplicamos la rotación
+resultado = tablero3.rotate()
 
 draw(resultado)
