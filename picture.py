@@ -11,6 +11,9 @@ class Picture:
       return color
     return inverter[color]
 
+
+
+
   def verticalMirror(self):
     """ Devuelve el espejo vertical de la imagen """
     vertical = []
@@ -18,9 +21,15 @@ class Picture:
     	vertical.append(value[::-1])
     return vertical
 
+
+
+
   def horizontalMirror(self):
     """ Devuelve el espejo horizontal de la imagen """
     return Picture(None)
+
+
+
 
   def negative(self):
     """ Devuelve un negativo de la imagen """
@@ -34,10 +43,19 @@ class Picture:
     return Picture(negativo)
 
 
+
+
   def join(self, p):
     """ Devuelve una nueva figura poniendo la figura del argumento 
         al lado derecho de la figura actual """
+    unido = []
+    for value in self.img:
+      filaJunta = ""
+      filaJunta += value + p[value]
     return Picture(None)
+
+
+
 
   def up(self, p):
     return Picture(None)

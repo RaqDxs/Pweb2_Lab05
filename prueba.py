@@ -1,8 +1,8 @@
 from chessPictures import *
 from interpreter import draw
 
+peon = Picture(BISHOP)
+torre = Picture(ROCK)
+tablero = peon.join(torre)
 
-rook_picture = Picture(ROCK)
-rook_negative = rook_picture.negative()
-draw(rook_negative)
-
+draw(tablero)
