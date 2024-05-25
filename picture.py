@@ -86,6 +86,11 @@ class Picture:
 # ToDo
   def verticalRepeat(self, n):
     return Picture(None)
+    repetidoV = []
+    for idx in range(n):
+      for fila in self.img:
+        repetidoV.append(fila)
+    return Picture(repetidoV)
 
 # ToDo
   def rotate(self):
