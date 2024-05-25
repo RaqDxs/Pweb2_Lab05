@@ -75,7 +75,7 @@ class Picture:
       sobrepuesto.append(filaSobrepuesta)
     return Picture(sobrepuesto)
 
-# ToDo 
+# Completed 
   def horizontalRepeat(self, n):
     repetidoH = []
     for fila in self.img:
