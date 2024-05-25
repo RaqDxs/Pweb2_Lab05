@@ -1,12 +1,14 @@
 from chessPictures import *
 from interpreter import draw
 
-
 torre = Picture(ROCK)
 
-torrehorizontal= torre.horizontalMirror()
+torre_horizontal = torre.horizontalMirror()
 
-tablero = torre.join(torrehorizontal)
+tablero = torre.join(torre_horizontal)
 
-draw(tablero)
+resultado = tablero.up(tablero)
+
+draw(resultado)
+
 

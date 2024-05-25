@@ -53,7 +53,16 @@ class Picture:
 
 # ToDo 
   def up(self, p):
-    return Picture(None)
+    sobrepuesto = []
+    for fila in self.img:  
+      filaSobrepuesta = ""
+      for caracter in fila:  
+        if caracter != " ":
+          filaSobrepuesta += caracter  
+        else:
+          filaSobrepuesta += p.img[self.img.index(fila)][fila.index(caracter)]
+      sobrepuesto.append(filaSobrepuesta)
+    return Picture(sobrepuesto)
 
 # ToDo
   def under(self, p):
