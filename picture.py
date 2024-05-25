@@ -64,7 +64,16 @@ class Picture:
 
 # ToDo
   def under(self, p):
-    return Picture(None)
+    sobrepuesto = []
+    for fila in p.img:  
+      filaSobrepuesta = ""
+      for caracter in fila:  
+        if caracter != " ":
+          filaSobrepuesta += caracter
+        else:
+          filaSobrepuesta += self.img[p.img.index(fila)][fila.index(caracter)]  
+      sobrepuesto.append(filaSobrepuesta)
+    return Picture(sobrepuesto)
 
 # ToDo 
   def horizontalRepeat(self, n):

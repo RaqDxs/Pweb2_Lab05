@@ -5,9 +5,11 @@ torre = Picture(ROCK)
 
 torre_horizontal = torre.horizontalMirror()
 
-tablero = torre.join(torre_horizontal)
+tablero1 = torre.join(torre_horizontal)
+tablero2 = tablero1.negative()
 
-resultado = tablero.up(tablero)
+
+resultado = tablero1.up(tablero2)
 
 draw(resultado)
 
