@@ -78,7 +78,7 @@ class Picture:
       repetidoH.append(filaRepetida)
     return Picture(repetidoH)
 
-# ToDo
+# Completed
   def verticalRepeat(self, n):
     repetidoV = []
     for i in range(n):
@@ -87,7 +87,7 @@ class Picture:
     return Picture(repetidoV)
 
 
-# ToDo
+# Completed
   def rotate(self):
     b = []
     lenSelf = len(self.img)
