@@ -1,4 +1,5 @@
 from colors import *
+
 class Picture:
   def __init__(self, img):
     self.img = img;
@@ -11,16 +12,12 @@ class Picture:
       return color
     return inverter[color]
 
-
-
 # Completed 
   def verticalMirror(self):
     vertical = []
     for value in self.img:
-    	vertical.append(value[::-1])
-    return vertical
-
-
+      vertical.append(value[::-1])
+    return Picture(vertical)
 
 # Completed 
   def horizontalMirror(self):
@@ -30,14 +27,13 @@ class Picture:
 
 # Completed 
   def negative(self):
-    negativo = []
-    for value in self.img:
-        filaInvertida = ""
-        for character in value:
-            inverted_character = self._invColor(character)
-            filaInvertida += inverted_character
-        negativo.append(filaInvertida)
-    return Picture(negativo)
+      negativo = []
+      for value in self.img:
+          filaInvertida = ""
+          for caracter in value:
+              filaInvertida += self._invColor(caracter)
+          negativo.append(filaInvertida)
+      return Picture(negativo)
 
 
 
@@ -61,17 +57,16 @@ class Picture:
     return Picture(compuesto)
 
 
-
 # Completed
   def under(self, p):
     sobrepuesto = []
-    for fila in p.img:  
+    for fila_index, fila in enumerate(p.img):  
       filaSobrepuesta = ""
-      for caracter in fila:  
+      for col_index, caracter in enumerate(fila):  
         if caracter != " ":
           filaSobrepuesta += caracter
         else:
-          filaSobrepuesta += self.img[p.img.index(fila)][fila.index(caracter)]  
+          filaSobrepuesta += self.img[fila_index][col_index]  
       sobrepuesto.append(filaSobrepuesta)
     return Picture(sobrepuesto)
 
@@ -86,9 +81,9 @@ class Picture:
 # ToDo
   def verticalRepeat(self, n):
     repetidoV = []
-    for idx in range(n):
-        for fila in self.img:
-            repetidoV.append(fila)
+    for i in range(n):
+      for fila in self.img:
+        repetidoV.append(fila)
     return Picture(repetidoV)
 
 
